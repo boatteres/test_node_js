@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "f273b2f1-8be1-4842-b41f-6bfccb01e02b",
+		"name": "T-shirt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21646541"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"gender\" : \"men\",\r\n\"style\" : \"plain Color/red\",\r\n\"size\" : \"xs\",\r\n\"price\" : \"400\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gender\" : \"men\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/products",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product_admin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gender\" : \"men\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/manage",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"manage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create order",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"member_id\" : 5,\r\n    \"name_cus\" : \"best\",\r\n     \"doc_no\" : \"A85286\",\r\n      \"product_code\": \"1\",\r\n       \"size\" : \"1\",\r\n        \"price\" : \"500\",\r\n        \"address\" : \"nana\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/product",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
