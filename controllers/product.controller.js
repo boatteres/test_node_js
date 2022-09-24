@@ -27,15 +27,15 @@ const createOrderDB = async(detail) => {
 
     return new Promise(async(resolve) => {
 
-        let str = `INSERT INTO product.order_detail ( member_id, name_cus, doc_no, product_code, size, price, address) 
-        VALUES ( '9', 'tw', '58963', '1002', '1', '400', 'ontheroaad')`
-        console.log(str);
+        // let str = `INSERT INTO product.order_detail ( member_id, name_cus, doc_no, product_code, size, price, address) 
+        // VALUES ( '9', 'tw', '58963', '1002', '1', '400', 'ontheroaad')`
+        // console.log(str);
 
-        //const params = [member_id, name_cus, doc_no, product_code, price];
+        // //const params = [member_id, name_cus, doc_no, product_code, price];
 
-        // let str = `INSERT INTO product.order_detail (member_id, name_cus, doc_no, product_code, size, price, address) 
-        // VALUES ( ?, ?, ?, ?, ?, ?, ?)
-        // [member_id, name_cus, doc_no, product_code, size, price,address]`
+        let str = `INSERT INTO product.order_detail (member_id, name_cus, doc_no, product_code, size, price, address) 
+        VALUES ( ?, ?, ?, ?, ?, ?, ?)
+        [member_id, name_cus, doc_no, product_code, size, price,address]`
 
         const params = [member_id, name_cus, doc_no, product_code, size, price, address];
 
